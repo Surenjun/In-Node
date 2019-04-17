@@ -31,3 +31,25 @@ if(cluster.isMaster){
     //在开发过程中，我们会通过 process.on('message', fn) 来实现进程间通信。
 
 //https://github.com/Surenjun/nodejs-learning-guide/blob/master/%E6%A8%A1%E5%9D%97/cluster.md
+
+//nginx proxy
+/*
+*   现代的 web 服务器一般都会在应用服务器外面再添加一层负载均衡，比如目前使用最广泛的 nginx。
+    利用 nginx 强大的反向代理功能，可以启动多个独立的 node 进程，分别绑定不同的端口，最后由nginx 接收请求然后进行分配。
+* */
+
+/*http {
+    upstream cluster {
+        server 127.0.0.1:3000;
+        server 127.0.0.1:3001;
+        server 127.0.0.1:3002;
+        server 127.0.0.1:3003;
+    }
+    server {
+        listen 80;
+        server_name www.domain.com;
+        location / {
+            proxy_pass http://cluster;
+    }
+    }
+}*/
