@@ -1,5 +1,5 @@
 //process是node的全局模块，作用比较直观。可以通过它来获得node进程相关的信息，比如运行node程序时的命令行参数。或者设置进程相关信息，比如设置环境变量。
-
+//process.stdout  process.stderr
 //环境变量 process.env
     if(process.env.NODE_ENV === 'production'){
         console.log('生产环境');
